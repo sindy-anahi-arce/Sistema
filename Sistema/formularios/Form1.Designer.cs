@@ -40,8 +40,9 @@ namespace Sistema
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 76);
+            this.label1.Location = new System.Drawing.Point(59, 74);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 22);
             this.label1.TabIndex = 0;
@@ -60,9 +61,9 @@ namespace Sistema
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(118, 74);
+            this.textBox1.Location = new System.Drawing.Point(165, 74);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(253, 28);
+            this.textBox1.Size = new System.Drawing.Size(220, 28);
             this.textBox1.TabIndex = 2;
             // 
             // textBox2
@@ -76,29 +77,34 @@ namespace Sistema
             // 
             // btnAcceso
             // 
+            this.btnAcceso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnAcceso.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAcceso.Location = new System.Drawing.Point(40, 225);
+            this.btnAcceso.Location = new System.Drawing.Point(299, 237);
             this.btnAcceso.Name = "btnAcceso";
             this.btnAcceso.Size = new System.Drawing.Size(86, 32);
             this.btnAcceso.TabIndex = 4;
             this.btnAcceso.Text = "Acceso";
-            this.btnAcceso.UseVisualStyleBackColor = true;
+            this.btnAcceso.UseVisualStyleBackColor = false;
+            this.btnAcceso.Click += new System.EventHandler(this.btnAcceso_Click);
             // 
             // btnCancelar
             // 
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnCancelar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(324, 225);
+            this.btnCancelar.Location = new System.Drawing.Point(66, 236);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(93, 33);
             this.btnCancelar.TabIndex = 5;
             this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(457, 300);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAcceso);
@@ -107,7 +113,9 @@ namespace Sistema
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Acceso al sistema";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

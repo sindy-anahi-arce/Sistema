@@ -33,8 +33,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,17 +52,111 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="clases\personas.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="BDABARROTERol.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BDABARROTERol.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Catalagos\CrystalReport2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Catalagos\Plantillas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="Catalagos\Plantillas.Designer.cs">
+      <DependentUpon>Plantillas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="clases\CdatGenerales.cs" />
+    <Compile Include="clases\Cmodulos.cs" />
+    <Compile Include="clases\conexion.cs" />
+    <Compile Include="clases\Cpermisos.cs" />
+    <Compile Include="clases\global.cs" />
+    <Compile Include="clases\personas.cs" />
+    <Compile Include="clases\roles.cs" />
+    <Compile Include="clases\usuario.cs" />
+    <Compile Include="formularios\DatosGenerales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\DatosGenerales.Designer.cs">
+      <DependentUpon>DatosGenerales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Froles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\Froles.Designer.cs">
+      <DependentUpon>Froles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\menu.Designer.cs">
+      <DependentUpon>menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Modulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\Modulos.Designer.cs">
+      <DependentUpon>Modulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Permisos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\Permisos.Designer.cs">
+      <DependentUpon>Permisos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\SearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\SearchForm.designer.cs">
+      <DependentUpon>SearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\usuarios.Designer.cs">
+      <DependentUpon>usuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="Catalagos\CrystalReport2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalagos\Plantillas.resx">
+      <DependentUpon>Plantillas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\DatosGenerales.resx">
+      <DependentUpon>DatosGenerales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Froles.resx">
+      <DependentUpon>Froles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\menu.resx">
+      <DependentUpon>menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Modulos.resx">
+      <DependentUpon>Modulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Permisos.resx">
+      <DependentUpon>Permisos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\SearchForm.resx">
+      <DependentUpon>SearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\usuarios.resx">
+      <DependentUpon>usuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -67,6 +167,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="BDABARROTERol.xsc">
+      <DependentUpon>BDABARROTERol.xsd</DependentUpon>
+    </None>
+    <None Include="BDABARROTERol.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BDABARROTERol.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BDABARROTERol.xss">
+      <DependentUpon>BDABARROTERol.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -81,8 +192,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="formularios\" />
     <Folder Include="informes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
